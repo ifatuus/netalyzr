@@ -5,6 +5,9 @@ Netalyzr ( https://www.netalyzr.berkeley.edu/ ) shutdown as of 2019.
 After finding the old command line client, and using a decompiler these are the files that remain.
 Perhaps someonme will be able to recreate or fix the java application it was one of the most useful and extensive internet diagnostic tools online.
 
+The main file that runs the test:
+https://github.com/ifatuus/netalyzr/blob/main/NetalyzrCLI.jar/Netalyzr.java
+
 Currently the application wants to report home to https://netalyzr.icsi.berkeley.edu/analysis/m=cli and expects a http code 200(OK) at the endpoint to move on with the test.
 Which at berkleys side was later moved to	https://n1.netalyzr.icsi.berkeley.edu/analysis/m=cli/l=en-US
 

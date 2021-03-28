@@ -2,6 +2,7 @@
 
 Reviving Netalyzr ( https://www.netalyzr.berkeley.edu/ shutdown as of 2019), the ICIR seem to have no plans to open source or revive Netalzyr themselves. This is unfortunate as it really did thousands of users diagnose internet related users - for free.
 In return  the authors got data - lots of data at one point 20-70 new sessions per hour. This was pretty early and the database was already over 180gb.
+(We would love this to be open sourced as well as the code to run our own nodes)
 
 We are taking a look at how or if we can revive Netalyzr, one of the most comprehensive internet checks/tests for the end user.
 

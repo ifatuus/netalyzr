@@ -1,0 +1,32 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">DNS port randomization</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In order to translate a mnemonic name (such as
+"@NETALYZR_DOMAIN@") to an IP address, your computer contacts a
+Domain Name Service (DNS) resolver.  This is a computer controlled by
+your ISP which acts as an intermediary.  Recently, a series of
+<a href="http://en.wikipedia.org/wiki/DNS_cache_poisoning">cache
+poisoning attacks</a> on the DNS system were discovered that can be
+thwarted in a number of ways.</p>
+
+<p>One such defense is DNS port randomization.  If your ISP's DNS
+resolver does not implement port randomization, you and all other
+users of this resolver are potentially vulnerable to DNS cache
+poisoning, where an attacker can cause any name to resolve to a system
+they control, allowing them to intercept and modify effectively all
+network traffic!</p>
+
+<p>In this test we check whether your ISP's DNS resolver employs port
+randomization to protect you from cache poisoning attacks.</p>
+
+<P><B>What if this test reports a problem:</B> Lacking port
+randomization is both a very serious and now nearly two year old
+problem.  You should contact your network provider or consider using a
+third-party DNS service provider such
+as <A HREF="http://www.opendns.com">Open DNS</A>
+or <A HREF="http://code.google.com/speed/public-dns/docs/using.html">Google
+Public DNS</A>.
+
+@DEF(NSANCHOR=#dnsport)@
+@TMPL(expl_footer_ns.txt)@

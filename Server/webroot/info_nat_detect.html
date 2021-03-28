@@ -1,0 +1,19 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">NAT detection</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> Home network gateways typically translate
+the local IP addresses of computers on your network to a single global
+IP address that is used to route your traffic across the
+Internet. Such network address translation (NAT) allows you to share
+Internet connectivity in your network and reduces the overall number
+of routable IP addresses in use, but complicates many
+applications.</p>
+
+<p>In this test, we determine whether your machine sits behind a
+NAT. We also determine aspects of how the actual translation is done;
+in particular, we look at the sequencing of the TCP source ports of
+subsequent connections crossing the NAT. If you are not behind a NAT,
+this test instead shows how your machine allocates TCP source ports.</p>
+
+@TMPL(expl_footer_ns_generic.txt)@

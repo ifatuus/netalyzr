@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+
+@TMPL(iframe_help.txt)@
+
+-->
+<html>
+<body>
+
+<div id="EnableJavascript" style="text-align:center; font-weight: bold;">
+Please enable JavaScript.
+</div>
+
+<div id="EnableJava" style="text-align: center; font-weight: bold; display: none;">
+No <a href="http://www.java.com">Java</a>? See help <a HREF="http://debug.netalyzr.icsi.berkeley.edu/faq.html#java_install" target="_blank">here</a>.
+</div>
+
+@TMPL(applet.txt)@
+
+<!--[if IE]>
+<div id="clientcaps" style="behavior:url(#default#clientCaps);"></div>
+<script>
+function ieJavaEnabled() {
+  var javaVersion = clientcaps.getComponentVersion("{08B0E5C0-4FCB-11CF-AAA5-00401C608500}", "ComponentID");
+  return javaVersion ? true : false;
+}
+</script>
+<![endif]-->
+
+<script language="javascript" type="text/javascript">
+<!--
+document.getElementById("EnableJavascript").style.display = "none";
+if (typeof ieJavaEnabled == "function") {
+  if (! ieJavaEnabled())
+    document.getElementById("EnableJava").style.display = "block";
+} else {
+  if (! window.navigator.javaEnabled())
+    document.getElementById("EnableJava").style.display = "block";
+}
+-->
+</script>
+</body>
+</html>

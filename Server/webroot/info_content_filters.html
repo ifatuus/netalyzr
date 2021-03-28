@@ -1,0 +1,24 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">HTTP content filtering</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> Several types of files downloadable via HTTP
+tend to trigger security or copyright concerns, and may thus be
+blocked. In this set of tests, we download safe and legitimate
+instances of and watch for modifications to the content or outright
+blocking of the content.</p>
+
+<p>In particular, we attempt to download an MP3 file which speaks
+"netalyzr", a BitTorrent file for a Linux distribution, a benign
+Windows executable, and a standard
+<a href="http://www.eicar.org/anti_virus_test_file.htm">test file</a>
+to check for the proper operation of any network anti-virus
+software.</p>
+
+<p>All of these files are merely downloaded into the applet and
+neither stored nor executed on your machine.  If you received a notice
+from your antivirus software, it was detecting the standard test
+file.</p>
+
+@DEF(NSANCHOR=#filetype)@
+@TMPL(expl_footer_ns.txt)@

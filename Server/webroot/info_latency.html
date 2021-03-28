@@ -1,0 +1,32 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">Network latency</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> Network latency, the time it takes a message
+to travel from your computer to a sever, has a huge impact on how
+you experience the network.  For example, when you click on a link,
+multiple messages pass between your system and the web server and,
+until enough messages have been exchanged, the page will not begin to
+appear.  Thus you generally want low latency, as this makes
+your web surfing feel faster and enables better performance in online
+games and VoIP (Internet Telephony) technology.</P>
+
+<P>Latency can be affected by many things.  If the remote server is
+far away, latency is higher.  If there is significant other activity
+on the network, you may also experience higher latency. Some access
+technologies such as satellite communication also add very high
+latency.</P>
+
+<P>This applet measures latency by sending a series of small messages
+to our server and then seeing how long it takes the messages to
+return.  We send 200 small UDP packets (12 bytes of payload), at
+a rate of 20 packets per second.</P>
+
+<P><B>What if this test reports a problem:</B> If you are outside of
+the US, your latency to our servers should naturally be higher.  Other
+conditions may also affect latency, including line noise or a weak
+wireless signal.  If the problem persists, you should contact your ISP
+to help resolve the issue.</P>
+
+@DEF(NSANCHOR=#tcplatency)@
+@TMPL(expl_footer_ns.txt)@

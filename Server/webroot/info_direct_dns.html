@@ -1,0 +1,35 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">Direct DNS lookups</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In order to translate a mnemonic name (such as
+"@NETALYZR_DOMAIN@") to an IP address, your computer
+contacts a Domain Name Service (DNS) resolver.  This is a computer
+controlled by your ISP which acts as an intermediary.</p>
+
+<p>It is often desirable for computers to be able to query specific
+DNS servers on the Internet directly, instead of relying on the
+default server assigned to your network.  Such queries may be blocked
+by firewalls or NATs which disallow the use of arbitrary DNS resolver,
+or which attempt to proxy DNS traffic while not fully supporting the
+DNS protocol.</P>
+
+<P>In this test, your computer conducts a series of direct DNS queries
+to our own DNS server to determine if some of these specialized queries are
+disrupted by the network.  Since all these queries conform to the DNS
+protocol, any blockage indicates either a deliberate restriction on
+DNS or, more likely, a network device that attempts to understand DNS
+traffic without fully implementing the DNS protocol.
+</P>
+
+<P><B>What if this test reports a problem:</B> The most likely cause
+if some DNS requests are allowed but these specialized requests are
+blocked is an error in your firewall or NAT.  Thankfully it is
+reasonably unlikely that your Internet experience is affected greatly
+by such broken devices. If you are on a public network there is not
+much you can do.  On your home network, try updating your NAT to the
+latest firmware.  If you are on a corporate network, the responsible
+devices should probably be updated.
+</P>
+
+@TMPL(expl_footer_ns_generic.txt)@

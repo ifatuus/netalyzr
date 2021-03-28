@@ -1,0 +1,18 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">SMTP connectivity</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> The SMTP protocol is the standard delivery
+mechanism for e-mail.  Malware frequently attempts to deliver large
+amounts of spam by directly contacting SMTP servers all over the
+Internet, which has caused many ISPs to block SMTP connectivity to all
+but the ISP's own SMTP servers.</p>
+
+<p>In this test, we determine whether you are able to connect to an
+SMTP server not related to the ISP. If the test fails, you need to
+ensure that you are using the SMTP servers permitted by your ISP, or
+use other forms of e-mail, such as web-based e-mail providers.
+</p>
+
+@DEF(NSANCHOR=#tcp)@
+@TMPL(expl_footer_ns.txt)@

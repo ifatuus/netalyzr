@@ -1,0 +1,23 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">Loss burst measurement</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> Packet loss, where a message is sent but
+not received, occurs continuously in the network.  Normally, this is
+not a problem if the loss rate is low.  But what often occurs,
+especially with wireless network, is bursts of loss: the network seems
+good, but drops in and out.</P>
+
+<P>This test is run in the background during the applet's execution,
+continuously monitoring the state of the network and recording when
+packets do not arrive, to check for such problems.</P>
+
+<P><B>What if this test reports a problem:</B> If you are on a
+wireless network, the most likely cause is random interference and
+noise.  If you move closer to the base station you will probably
+experience better connectivity.  If you are on a wired network, this
+may be a problem with your connection to the Internet and you should
+contact your ISP for assistance.</P>
+
+@DEF(NSANCHOR=#background)@
+@TMPL(expl_footer_ns.txt)@

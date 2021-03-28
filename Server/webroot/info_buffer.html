@@ -1,0 +1,52 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">Network buffering</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In addition
+to <A HREF="./info_latency.html">latency</A>
+and <A HREF="./info_bandwidth">bandwidth</A>, one final, often
+overlooked aspect of network quality is the amount of buffering.</P>
+
+<P>Often, your computer wants to send or receive data faster than some
+point in the network allows.  Thus that point needs a buffer to store
+this data until it is able to send it.  The problem arises when the
+buffer is too large or too small.  If the buffer is too small, network
+protocols such
+as <A HREF="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP</A>
+are unable to send as fast as the network allows.  If the buffer is
+too large, a single transfer will fill up the buffer, delaying all
+other traffic.</P>
+
+<P>Currently, a lot of users have networks which are significantly
+over-buffered.  As a result, if the network is running at capacity,
+packets may be substantially delayed.  This is why, for example,
+BitTorrent may slow down a user's web surfing, even though TCP is able
+to share all the bandwidth, the file transfer fills up the buffer
+which now slows down all other traffic.</P>
+
+<P>This test is deliberately simple.  During the latency test,
+Netalyzr sends a large number of small messages between your computer
+and our server and measure the time it takes for each packet to make
+the trip.</P>  
+
+<P>Then, during the bandwidth tests, these messages are significantly
+larger and sent significantly faster, in an attempt to fill any
+buffers in the path.  The applet now measures the time it takes for
+each message to go between the applet and server when the buffers are
+(hopefully) full, to gauge the maximum impact that full buffers would
+have on normal traffic.</P>
+
+<P><B>What if this test reports a problem:</B> A problem in this test
+means your network can't "Walk and chew gum" at the same time.  You
+can conduct large file transfers (such as using file sharing
+programs), or you can perform interactive tasks (like websurfing or
+VoIP calls) without the buffer being a problem.</P>  
+
+<P>The problem occurs if you try to do both <I>types</I> of activity
+at the same time: if you try to run file transfers concurrent with
+other activity, the other activity will feel very "slow", as the file
+transfer fills up the large buffer, adding latency to all other
+traffic.</P>
+
+@DEF(NSANCHOR=#buffer)@
+@TMPL(expl_footer_ns.txt)@

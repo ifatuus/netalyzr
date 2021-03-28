@@ -1,0 +1,30 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">EDNS support</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In order to translate a mnemonic name (such
+as "@NETALYZR_DOMAIN@") to an IP address, this involves a protocol
+knows as DNS, or the Domain Name Service.  EDNS, or Extended DNS, is
+an extension to the DNS protocol necessary to implement DNS security
+enhancements, which require the ability to send significantly longer
+messages.  Unfortunately, some older network devices do not understand
+EDNS and think it is anomalous.</P>
+
+</P>This test works by sending DNS messages from the applet to our
+server, which then replies with EDNS responses of varying size.  The
+small reply is to check that EDNS is supported, while the medium and
+large reply are used to check whether a network device rejects large
+DNS replies, which will be necessary as DNS information becomes
+cryptographically signed.</P>
+
+<p><B>What if this test reports a problem:</B> If the UDP
+fragmentation test doesn't work, that is the most likely cause of any
+failure on this test.  If that test works fine, the most likely
+cause is a misconfiguration or error in your NAT ("home router") or
+firewall.  You should make sure your home router or firewall
+is running updated software to prevent what might be perceived as
+mysterious failures and slowdowns when DNSSEC becomes more widely
+deployed.</P>
+
+@DEF(NSANCHOR=#edns)@
+@TMPL(expl_footer_ns.txt)@

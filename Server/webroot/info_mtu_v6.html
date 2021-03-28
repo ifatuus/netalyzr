@@ -1,0 +1,45 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">Network MTU and IPv6</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> Networks cannot transfer arbitrarily big
+messages.  Their paths are limited by their Maximum Transmission Unit
+(MTU), the largest message the network can transport in one piece.
+For example, our entrance to the network has an MTU of 1500 bytes,
+which is the standard size for Ethernet networks.  Other devices on
+the Internet may restrict this size to a smaller amount.</P>
+
+<P>This test attempts to discover the network's MTU for the path
+between your system and our server when using IPv6, the
+next-generation Internet Protocol standard that is seeing increasing
+adoption.
+For the path between your system and our server we cannot conduct a
+complete probe.  Instead, we send a single, fragmented message from
+the applet, to which our server replies with the length of the first
+fragment. This is often, but not always, the network's MTU.</P>
+
+<P>The path between our server and your network is probed in more
+detail.  In this test, large IP datagrams are sent from the server to
+the client.  If the packet would pass through a network with a smaller
+MTU, the network is supposed to reply back to our server that this is
+a problem, and our server forwards that on to the client.  This allows
+us to search for the largest permissible packet size.  This also
+detects cases where the fragmenting network does not send the proper
+notification back to our server.</P>
+
+<P>At the same time, if your network supports a large MTU, we are able
+to check if such "too big" messages are correctly received by your
+computer.  To accomplish this, our server, although it could accept a
+large message, instead replies with a "too big" message which your
+computer should then use to send the message broken into smaller
+fragments.</P>
+
+<P><B>What if this test reports a problem:</B> If there is a problem,
+there is unfortunately little that can be done since MTU problems can
+in principle be located anywhere between your computer and our
+servers.  If you experience spurious connectivity problems for long
+amounts of time, you can attempt to reduce the MTU on your computer's
+network interface.  If that does not help, please contact your
+ISP.</P>
+
+@TMPL(expl_footer_ns_generic.txt)@

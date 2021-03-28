@@ -1,0 +1,235 @@
+@DEF(TITLE=FAQ)@
+@DEF(METADESCR=The Netalyzr tests your Internet connection for signs of trouble. Understand your connectivity through a detailed report of any performance and security issues.)@
+@DEF(METAKEYWORDS=Netalyzr, network troubleshooting, network analysis, network analyzer, Internet debugging, connectivity test, proxy, filtering, bandwidth, uplink, downlink, latency)@
+@DEF(ADDLHEAD=<script type="text/javascript">function setback(){document.getElementById('backlink').href="javascript: history.back()"}</script>)@
+@DEF(BODYTWEAKS=onload="setback()")@
+@TMPL(header-noupdate.txt)@
+<div class="bar-border"><div id="bar">
+<span class="txt-current">Introduction</span> &raquo; <span class="txt-todo">Analysis</span> &raquo; <span class="txt-todo">Results</span> 
+</div></div>
+
+<div id="content-main">
+
+<p class="txt-title">Frequently Asked Questions</p>
+<hr class="summary">
+
+<ul>
+  <li><a class="plain" href="#example">Can you show me an example of your test results? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#summary">How does the test summary work? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#question">How can I get in touch? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#info">What information do you collect? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#nolaunch">There is no launch link on the start page. Why? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#java">Why Java? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#java_install">How do I install Java? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#javascript">Why JavaScript? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#privacy">Are you accessing any information on my computer? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#probing">Are you probing my local network? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#permissions">How can I allow all tests? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#eicar">My anti-virus program triggered an alert while Netalyzr was running.  Why? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#buffer">Netalyzr reports large buffers in my up/downlink. How can I fix that?  <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#icsi">Who developed Netalyzr? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#links">Are there other projects like Netalyzr? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#safer">What's the connection between the name <em>Netalyzr</em> and Safer Networking? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+  <li><a class="plain" href="#funding">Who funded this work? <img src="/arr_err.gif" border="0" alt="link"></a></li>
+</ul>
+
+<a name="example"></a>
+<ul class="faq">
+ <li class="qu">Can you show me an example of your test results?</li>  
+ <li class="an">Yes, we provide one <a href="http://@NETALYZR_DOMAIN@/restore/id=example-session">here</a>.</li>
+</ul>
+
+<a name="summary"></a>
+<ul class="faq">
+ <li class="qu">How does the test summary work?</li>  
+ <li class="an">Please see <a href="/help.html">here</a> for a detailed explanation.</li>
+</ul>
+
+<a name="question"></a>
+<ul class="faq">
+ <li class="qu">I have a question about my results. How can I get in touch?</li>
+ <li class="an">We run a mailing list at
+   <a href="http://mailman.ICSI.Berkeley.EDU/mailman/listinfo/netalyzr">http://mailman.ICSI.Berkeley.EDU/mailman/listinfo/netalyzr</a>.
+   To contact us privately, please send email to <a href="mailto:netalyzr-help@icsi.berkeley.edu">netalyzr-help@icsi.berkeley.edu</a>.
+   If you have a question about a particular session, please include
+   the session ID. It is shown in the status bar during the analysis,
+   and stated explicitly as the session's permalink at the top of the
+   summary page. You can also just cut-and-paste the URL shown by your
+   browser for the summary page.
+   
+ </li>
+</ul>
+
+<a name="info"></a>
+<ul class="faq">
+ <li class="qu">What information do you collect?</li>
+ <li class="an">We collect effectively the same information we present
+   to you in the summary page, and nothing else. All of this
+   information is collected from network connections the applet
+   initiates itself.
+ </li>
+</ul>
+
+<a name="nolaunch"></a>
+<ul class="faq">
+ <li class="qu">There is no launch link on the start page. Why?</li>	  
+ <li class="an">Your system needs to provide a Java Runtime
+   Environment (JRE) for applets to operate in. Please ensure that
+   a JRE is installed on your machine, and that Java is enabled in
+   your browser. You can test your installation by visiting Sun's
+   <a href="http://www.java.com/en/download/installed.jsp?detect=jre&amp;try=1">Java
+   detector</a>.
+</ul>
+
+<a name="java"></a>
+<ul class="faq">
+ <li class="qu">Why Java?</li>	  
+ <li class="an">We are unable to perform all of the tests we provide
+   using more lightweight alternatives, such as JavaScript.  In
+   particular, JavaScript does not enable the browser to create
+   arbitrary network connections.</li>
+</ul>
+
+<a name="java_install"></a>
+<ul class="faq">
+ <li class="qu">How do I install Java?</li>	  
+ <li class="an">
+First make sure your browser is willing to use Java and then reload the front page:
+<BR>In Internet Explorer 7, go to Tools <img src="/arr_right.gif" alt="->">
+Internet Options <img src="/arr_right.gif" alt="->">
+Programs <img src="/arr_right.gif" alt="->"> Manage add-ons and ensure
+that the Java plugins are enabled.
+<BR>In Firefox, make sure the "Enable Java" tick box under
+Preferences <img src="/arr_right.gif" alt="->"> Content is selected.
+<BR>In Safari, make sure the "Enable Java" tick box under
+Preferences <img src="/arr_right.gif" alt="->"> Security is selected.
+<BR>If that still doesn't work, follow the instructions at
+at <A HREF="http://www.java.com/getjava/">http://www.java.com/getjava/</A> to download and install Java.
+</li>
+</ul>
+
+<a name="java"></a>
+<ul class="faq">
+ <li class="qu">Why JavaScript?</li>	  
+ <li class="an">Some information, such as cookies or framing, can't be
+ detected within Java but can be detected by JavaScript.  Thus in
+ addition to the Java applet, there is a small amount of JavaScript on
+ our analysis page to perform these checks.
+ </li>
+</ul>
+
+<a name="privacy"></a>
+<ul class="faq">
+ <li class="qu">Are you accessing any information on my computer?</li>	  
+ <li class="an">
+We do not touch any files on your disk. The only system-local
+information we use is your local time, what IP address Java
+believes has been assigned to your machine, and what information
+your browser routinely exposes (its "user agent" and cookies
+it automatically provides because you have visited our sites
+before).  All other information is obtained from the network.
+</li>
+</ul>
+
+<a name="probing"></a>
+<ul class="faq">
+ <li class="qu">Are you probing my local network?</li>	  
+ <li class="an">No. All network connectivity is exclusively with your
+   DNS resolver, our servers, and any proxies in front of them.</li>
+</ul>
+
+<a name="permissions"></a>
+<ul class="faq">
+ <li class="qu">The results state the applet was not permitted to
+   conduct all tests. How can I allow the tests?</li>
+ <li class="an">The applet operates within the confines of the
+   security policy enforced by your Java runtime. When the applet
+   attempts to perform an operation that violates this policy, a
+   security exception is thrown, and the operation is not
+   executed. Browsers handle these security restrictions in a variety
+   of ways. By confirming that you trust the applet, many browsers
+   will allow the applet to conduct all tests.  However, some Java
+   installations will not allow certain tests to run, even if the user
+   gives consent.  If you are asked to confirm individual operations,
+   we suggest to permit them as required to complete the tests.
+ </li>
+</ul>
+
+<a name="eicar"></a>
+<ul class="faq">
+ <li class="qu">My anti-virus program triggered an alert while Netalyzr was running.
+  Why?</li>  
+ <li class="an">
+  As part of our content-filtering tests, we download the <a href="http://www.eicar.org/anti_virus_test_file.htm">EICAR</a>
+  antivirus test file into the applet. This file is harmless and
+  designed to test correct functionality of antivirus software. Any
+  related warnings or alerts thus merely signal correct functioning of
+  your antivirus installation and can safely be ignored.
+</li>
+</ul>
+
+<a name="buffer"></a>
+<ul class="faq">
+ <li class="qu">Netalyzr reports large buffers in my up/downlink. How can I fix that?</li>
+ <li class="an">
+The first option is just to be aware of the issue.  If you don't try
+to perform large file transfers or P2P applications while also
+websurfing, gaming, or using VoIP, you shouldn't notice a problem.
+Buffer sizing is only a problem if you try to perform both large
+transfers and interactive applications simultaneously.
+<BR>The second is to pay for a higher bandwidth service, if it is
+important for you to be able to perform both large file transfers and
+interactive applications at the same time.  The problem is due to the
+ratio between the buffer's capacity and the bandwidth of the
+connection, so if you pay for more bandwidth, the buffering problem is
+reduced.
+<BR>Unfortunately the real solution, namely access devices which allow
+programmable buffer sizing or dynamically resize their buffer based on
+available bandwidth, is not generally available to the customer at
+this time.
+</li>
+</ul>
+
+<a name="icsi"></a>
+<ul class="faq">
+ <li class="qu">Who developed Netalyzr?</li>
+ <li class="an">
+   Netalyzr is developed by the Networking Group at
+   the <A HREF="http://www.icsi.berkeley.edu/">International Computer
+   Science Institute</A>, an independent non-profit research institute
+   affiliated with the University of California, Berkeley, USA.
+</li>
+</ul>
+
+<a name="links"></a>
+<ul class="faq">
+ <li class="qu">Are there other projects like Netalyzr?</li>
+ <li class="an">
+   Yes, we list some of them on our <a href="/links.html">links page</a>.
+</li>
+</ul>
+
+<a name="safer"></a>
+<ul class="faq">
+ <li class="qu">What's the connection between the name <em>Netalyzr</em> and <A HREF="http://www.safer-networking.org/en/home/index.html">Safer Networking</A>?</li>
+ <li class="an">
+Our Netalyzr is unrelated to any of Safer Networking's products.
+However, Safer Networking holds a <b>trademark</b> on the name
+<A HREF="http://forums.spybot.info/forumdisplay.php?f=7">NetAlyzer</A>.
+We chose the name for our tool before we had learned of this conflict.
+Safer Networking has graciously agreed to allow us to continue using
+the name.
+</li>
+</ul>
+
+<a name="funding"></a>
+<ul class="faq">
+ <li class="qu">Who funded this work?</li>
+ <li class="an">We gratefully acknowledge the National Science
+     Foundation's financial support for this project.
+</li>
+</ul>
+
+<div id="box"><span id="box-inner"><a id="backlink" class="boxlink" href="index.html">&laquo; Back</a></span></div>
+</div>
+@TMPL(footer-nosess.txt)@

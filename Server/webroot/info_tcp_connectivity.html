@@ -1,0 +1,34 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">TCP connectivity</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In this suite of tests we determine basic
+TCP connectivity available from your computer. In particular, we test
+whether your machine is allowed to send the following to our server:
+<ul>
+<li>Manually crafted HTTP connections. We require these for a number
+of HTTP-related tests.</li>
+<li>SMTP connections.  This tests whether you can send email directly
+to recipients.  While this may be convenient for users, it is often
+restricted in order to limit spamming from infected machines.</li>
+<li>TCP-based DNS requests. These provide an alternative way to
+conduct DNS requests, but may be blocked.</li>
+<li>Other services.  Here we test whether various common services
+(such as SSH, IMAP, or POP3) are blocked.</li>
+</ul>
+</p>
+
+<P><B>What if this test reports a problem:</B> This depends on the
+protocol involved and the context.  In some cases, the reason is
+merely technical and not a cause for concern.  For example, many NATs
+will disrupt our FTP test due to the unique nature of the FTP
+protocol, but this does not stop FTP from working.  Services are also
+frequently blocked for policy or security reasons.  For example, many
+ISPs block the common Windows ports (SMB, RPC, etc.) in order to
+shield their customers from attacks, and restrict outbound SMTP reduce
+the volume of spam sent from any infected clients' machines.
+Corporate networks often impose a considerable amount of filtering as
+part of their network usage policy.</P>
+
+@DEF(NSANCHOR=#tcp)@
+@TMPL(expl_footer_ns.txt)@

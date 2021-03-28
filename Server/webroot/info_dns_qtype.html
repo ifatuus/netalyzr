@@ -1,0 +1,19 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">DNS glue</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In order to translate a mnemonic name (such as
+"@NETALYZR_DOMAIN@") to an IP address, your computer
+contacts a Domain Name Service (DNS) resolver.  This is a computer
+controlled by your ISP which acts as an intermediary.</p>
+
+<P>One subtle question is how DNS resolvers ask for this information.
+Most ask for an "A" record (QTYPE=A).  But a few ask for "ANY" records
+about a host (QTYPE=ANY). </p>
+
+<P>This test works by querying special names in a domain we control,
+where the result differs based on whether it was queried for an A
+record or an ANY record.</P>
+
+@DEF(NSANCHOR=#dnsglue)@
+@TMPL(expl_footer_ns.txt)@

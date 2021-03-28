@@ -1,0 +1,155 @@
+<APPLET CODE="NetalyzrApplet" name="Netalyzr" archive="/applet/id=@AGENT_ID@" WIDTH="500" HEIGHT="70">
+
+<!-- Session info -->
+<param name="LANG" value="@LANG@">
+<param name="MODE" value="@MODE@">
+<param name="AGENT_ID" value="@AGENT_ID@">
+
+<!-- Another server reachability test -->
+<param name="ALTERNATE_SERVER" value="www.icir.org">
+<param name="ALTERNATE_SERVER_PORT" value="80">
+
+<!-- Server reporting address -->
+<param name="REPORT_SERVER" value="@MY_NAME@.@NETALYZR_DOMAIN@">
+<param name="REPORT_SERVER_PORT" value="80">
+<param name="UDP_ECHO_PORT" value="1947">
+<param name="TCP_ECHO_PORT" value="1947">
+
+<!-- Test for latency/bandwidth/etc issues -->
+<param name="UDP_BUFFER_PORT" value="1948">
+
+<!-- Test for DNS proxying -->
+<param name="DNS_ECHO_PORT" value="1949">
+
+<!-- Test for Fragmentation -->
+<param name="FRAGMENT_ECHO_PORT" value="1950">
+
+<!-- Test for Fragmentation -->
+<param name="FRAGMENT_ECHO_PORT_V6" value="1951">
+
+<!-- The length of lena -->
+<param name="IMAGE_LENGTH" value="67683">
+
+<!-- DNS-related parameters -->
+<param name="VALID_DNS_NAME" value="www.icir.org">
+<param name="INVALID_DNS_NAME" value="fubararg.icir.org">
+<param name="INVALID_DNS_DOMAIN" value="www.aoeutnhaonethaaaoeuh.com">
+<param name="UNCACHED_NAME" value="nocached.icir.org">
+<param name="CACHED_NAME" value="cached.icir.org">
+<param name="DNS_SERVER" value="192.150.186.11">
+<param name="CUST_DNS_DOMAIN" value="@NETALYZR_DOMAIN@">
+<param name="CUST_DNS_ALT_DOMAIN" value="netalyzr.icir.org">
+<param name="CUST_DNS_ADDR" value="@MY_ADDR@">
+
+<!-- Properties of user's browser -->
+<param name="USER_AGENT" value="@USER_AGENT@">
+<param name="ACCEPT" value="@ACCEPT@">
+<param name="ACCEPT_LANGUAGE" value="@ACCEPT_LANG@">
+<param name="ACCEPT_ENCODING" value="@ACCEPT_ENC@">
+<param name="ACCEPT_CHARSET" value="@ACCEPT_CHARS@">
+
+<!-- Tests for lookups -->
+<param name="EXE_FILE" value="netalyzr.exe">
+<param name="EXE_LENGTH" value="3072">
+<param name="MP3_FILE" value="netalyzr.mp3">
+<param name="MP3_LENGTH" value="8532">
+<param name="FAKE_VIRUS_FILE" value="eicar-standard-av-test-file.com">
+<param name="FAKE_VIRUS_LENGTH" value="68">
+<param name="TORRENT_FILE" value="Fedora-10-i686-Live.torrent">
+<param name="TORRENT_LENGTH" value="54772">
+
+
+<!-- Tests for some detailed DNS and IPv6 behavior, set the names here
+     for non-DNS reliance.  In particular IPV6_SERVER should
+  also be returend for ipv6_node, and
+  IPV4_SERVER should be returned for ipv4_node.netalyzr... 
+  Due to temporary brokenness, currently loopback
+  for testing purposes
+  -->
+
+<param name="IPV6_SERVER" value="@IPV6_SERVER@">
+<param name="IPV4_SERVER" value="@IPV4_SERVER@">
+
+</APPLET>
+
+<!-- JavaScript properties -->
+<script language="javascript" type="text/javascript">
+<!--
+var framed = top.frames.length != 0 || top != self;
+var url = 'http://@MY_NAME@.@NETALYZR_DOMAIN@/javascript/id=@AGENT_ID@/jsFramed=' + framed + '/jsCookies=' + escape(document.cookie);
+document.write('<img src=' + url + ' alt="" border="0">');
+-->
+</script>
+
+
+<!-- JavaScript-based v6 test -->
+<script language="javascript" type="text/javascript">
+<!--
+function imgLoad() {
+  var url = 'http://@MY_NAME@.@NETALYZR_DOMAIN@/javascript/id=@AGENT_ID@/jsIPv6=True';
+  var data = '<img src=' + url + ' alt="">';
+  document.getElementById("v6note").innerHTML = data;
+}
+
+function imgErr() {
+  var url = 'http://@MY_NAME@.@NETALYZR_DOMAIN@/javascript/id=@AGENT_ID@/jsIPv6=False';
+  var data = '<img src=' + url + ' alt="">';
+  document.getElementById("v6note").innerHTML = data;
+}
+
+function checkStatus() {
+  var img = document.getElementById("v6img");
+  if (img && img.width > 150 && img.height > 50) {
+    var url = 'http://@MY_NAME@.@NETALYZR_DOMAIN@/javascript/id=@AGENT_ID@/jsIPv6=True';
+    var data = '<img src=' + url + ' alt="">';
+    document.getElementById("v6note").innerHTML = data;
+  }
+}
+
+window.onload = checkStatus;
+-->
+</script>
+
+
+<div style="display:none">
+<div id="v6note"></div>
+<img id="v6img" onload="imgLoad()" onerror="imgErr()" src="http://ipv6.google.com/images/logo_sm.gif">
+</div>
+
+<!-- Advanced Javscript-based v6 tests -->
+<!-- We use the agent-id in the URLs to act as a guarenteed cache-buster -->
+
+<script language="javascript" type="text/javascript">
+<!--
+function nodeLoad(node){
+   var time = new Date();
+   var img = document.getElementById(node + "_img");
+   var url = 'http://@MY_NAME@.@NETALYZR_DOMAIN@/javascript/id=@AGENT_ID@/' + node + '=True/' + node + 'Time=' + time.getTime();
+   url = url + '/' + node + 'Height=' + img.height + '/' + node + 'Width=' + img.width;
+   var data = '<img src=' + url + ' alt="">';
+   document.getElementById(node + '_div').innerHTML = data;
+}
+
+function nodeError(node){
+   var time = new Date()
+   var url = 'http://@MY_NAME@.@NETALYZR_DOMAIN@/javascript/id=@AGENT_ID@/' + node + '=False/' + node + 'Time=' + time.getTime();
+   var data = '<img src=' + url + ' alt="">';
+   document.getElementById(node + '_div').innerHTML = data;
+}
+
+-->
+</script>
+
+<div style="display:none">
+<div id="v4node_div"></div>
+<img id="v4node_img" onload="nodeLoad('v4node')" onerror="nodeError('v4node')"
+     src="http://ipv4-node.@AGENT_ID@.@NETALYZR_DOMAIN@/test.gif">
+
+<div id="v4v6node_div"></div>
+<img id="v4v6node_img" onload="nodeLoad('v4v6node')" onerror="nodeError('v4v6node')"
+     src="http://ipv4v6-node.@AGENT_ID@.@NETALYZR_DOMAIN@/test.gif">
+
+<div id="v6node_div"></div>
+<img id="v6node_img" onload="nodeLoad('v6node')" onerror="nodeError('v6node')"
+     src="http://ipv6-node.@AGENT_ID@.@NETALYZR_DOMAIN@/test.gif">
+</div>

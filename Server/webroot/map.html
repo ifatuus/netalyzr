@@ -1,0 +1,70 @@
+@DEF(METADESCR=The Netalyzr tests your Internet connection for signs of trouble. Understand your connectivity through a detailed report of any performance and security issues.)@
+@DEF(METAKEYWORDS=Netalyzr, network troubleshooting, network analysis, network analyzer, Internet debugging, connectivity test, proxy, filtering, bandwidth, uplink, downlink, latency)@
+@DEF(ADDLHEAD=<script src="lang.js" type="text/javascript"></script>)@
+@TMPL(header.txt)@
+
+<script language="JavaScript" type="text/javascript">
+<!--
+if (window != top) top.location.href = location.href;
+// -->
+</script>
+
+<div class="bar-border"><div id="bar">
+<span class="txt-current">Introduction</span> &raquo; <span class="txt-todo">Analysis</span> &raquo; <span class="txt-todo">Results</span> 
+</div></div>
+
+<div id="content-main">
+
+<p class="txt-updated">The NetaMap. Leave your mark.</p>
+
+<p class="center">
+  <img src="map.png" border="0" vspace="10" alt="A global map of Netalyzr users.">
+</p>
+
+<p>Every dot on this map is a location from where Netalyzr has been
+run. Many thanks to our users!  To contribute, run Netalyzr now: click
+on the link below to get started.</p>
+
+<div id="EnableJavascript" style="text-align:center; font-weight: bold;">
+<P>Please enable JavaScript before running Netalyzr.</P>
+</div>
+
+<div id="EnableJava" style="text-align: center; font-weight: bold; display: none;"><P>If
+you don't see a big "Start Analysis" link,<br> please see
+the <A HREF="http://debug.netalyzr.icsi.berkeley.edu/faq.html#java_install">FAQ</A>
+for details on how to enable Java.</P></div>
+
+<div id="box"><span id="box-inner">
+<applet code="Start" name="Start" archive="Start.jar" width="300" height="45">
+  <param name="DESTINATION" value="http://@NODE@.@NETALYZR_DOMAIN@/analysis/">
+  <script language="javascript" type="text/javascript">
+  <!-- document.getElementById("EnableJava").style.display = "block"; -->
+  </script>
+</applet>
+</span></div>
+
+<!--[if IE]>
+<div id="clientcaps" style="behavior:url(#default#clientCaps);"></div>
+<script>
+function ieJavaEnabled() {
+  var javaVersion = clientcaps.getComponentVersion("{08B0E5C0-4FCB-11CF-AAA5-00401C608500}", "ComponentID");
+  return javaVersion ? true : false;
+}
+</script>
+<![endif]-->
+
+<script language="javascript" type="text/javascript">
+<!--
+document.getElementById("EnableJavascript").style.display = "none";
+if (typeof ieJavaEnabled == "function") {
+  if (! ieJavaEnabled())
+    document.getElementById("EnableJava").style.display = "block";
+} else {
+  if (! window.navigator.javaEnabled())
+    document.getElementById("EnableJava").style.display = "block";
+}
+-->
+</script>
+
+</div>
+@TMPL(footer-nosess.txt)@

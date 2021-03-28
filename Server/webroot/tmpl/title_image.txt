@@ -1,0 +1,9 @@
+<div id="proc">
+  <img src="netalyzr-process.png" alt="The Netalyzr tests your Internet connection for signs of trouble. Understand your connectivity through a detailed report of any performance and security issues." border="0" vspace="10">
+  <div id="proc1-title">What's up with my network?</div>
+  <div id="proc1">Some services seem broken? Things are very slow? Is there something wrong?</div>
+  <div id="proc2-title">Run the Netalyzr.</div>
+  <div id="proc2">We test your Internet connection for signs of trouble.</div>
+  <div id="proc3-title">Understand your connectivity.</div>
+  <div id="proc3">A detailed report shows performance &amp; security issues.</div>
+</div>

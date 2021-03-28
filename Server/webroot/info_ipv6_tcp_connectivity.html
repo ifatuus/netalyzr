@@ -1,0 +1,24 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">IPv6-based TCP connectivity</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In this suite of tests we determine basic
+TCP connectivity available from your computer when using the IPv6
+network protocol. The tests are otherwise similar to
+the <a href="info_tcp_connectivity.html">ones conducted over IPv4</a>,
+so make sure to compare the respective results.
+
+<P><B>What if this test reports a problem:</B> This depends on the
+protocol involved and the context.  In some cases, the reason is
+merely technical and not a cause for concern.  For example, many NATs
+will disrupt our FTP test due to the unique nature of the FTP
+protocol, but this does not stop FTP from working.  Services are also
+frequently blocked for policy or security reasons.  For example, many
+ISPs block the common Windows ports (SMB, RPC, etc.) in order to
+shield their customers from attacks, and restrict outbound SMTP reduce
+the volume of spam sent from any infected clients' machines.
+Corporate networks often impose a considerable amount of filtering as
+part of their network usage policy.</P>
+
+@DEF(NSANCHOR=#tcp)@
+@TMPL(expl_footer_ns.txt)@

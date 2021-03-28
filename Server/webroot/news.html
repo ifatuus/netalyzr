@@ -1,0 +1,72 @@
+@TMPL(expl_header.txt)@
+
+<p class="txt-title">Netalyzr News</p>
+<hr class="summary">
+
+<p><B>May 24, 2010:</B> Today we're very glad to announce
+a partnership
+with <a href="http://www.newscientist.com/article/dn18938-revealing-the-secrets-of-the-internets-gatekeepers.html">New
+Scientist</a>. Not only is New Scientist going to feature the Netalyzr
+in a series of articles based on findings of our measurement study,
+their site also kindly hosts a
+helpful <a href="http://www.newscientist.com/article/dn18953-understanding-your-netalyzr-results.html">guide
+to understanding Netalyzr results</a> for people of all technical
+skill levels.
+</p>
+<p>
+In addition, we have added a <a href="/map.html">map</a> to the site,
+showing locations on the globe from where people have conducted test
+sessions.  Thanks for using Netalyzr!
+</p>
+
+<p><B>February 19, 2010:</B> An unnanounced power outage has knocked
+the Netalyzr site offline for approximately 12 hours. Things should be
+back to normal at this point. We apologize for the inconvenience.
+</p>
+
+<p><B>January 12, 2010:</B> We are out of beta!  We have been toiling
+hard to implement new tests, make the existing ones more robust, and
+improve the user interface.  Among the changes we are rolling out
+today are:
+
+<ul>
+<li><p><span class="txt-bold">New tests.</span>  We now provide a path
+MTU test, IP fragmentation analysis, DNS proxy examination, DNS
+SERFVAIL wildcarding detection, more precise clock drift detection,
+and check correct resolution of a lot more names.  Besides the
+improved client-side transcript you can now inspect the server-side
+one, which is useful for debugging highly troubled sessions. In
+addition, we have improved the robustness of the existing tests in
+many ways.
+</p>
+
+<li><p><span class="txt-bold">Interface improvements.</span>  A
+frequent complaint we received was that the results summary is
+overwhelming. As a first step to improve the situation, you can now
+selectively show or hide result summary detail. On the summary page,
+you find clickable plus/minus symbols that will expand/collapse test
+results on the entire page, in a particular test class, or on a
+particular test. When you first arrive at the summary page, any issues
+we have noticed remain expanded by default.</p>
+
+<p class="center"><img src="toggle.png" alt="Visibility toggle"></p>
+
+<p>To give you an idea of how successful a particular set of tests was,
+we now provide a color summary in collapsed results. These show
+successful tests (green), mild anomalies (orange), and real problems
+(red) in proportion to their occurrence in the collapsed results:</p>
+
+<p class="center"><img src="color-summary.png" alt="Color summary"></p>
+</li>
+
+<li><p><span class="txt-bold">Updated info pages.</span>  Each of our
+tests comes with an info page, available by clicking on the test's
+name (such as "Path MTU" in the above).  We have given those info
+pages a makeover, which will hopefully make them easier to understand
+and more useful to less technical users.
+</li>
+</ul>
+
+</div>
+
+@TMPL(footer-nosess.txt)@

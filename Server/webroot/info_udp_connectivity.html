@@ -1,0 +1,36 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">UDP connectivity</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In this suite of tests we determine basic
+UDP connectivity available from your computer. In particular, we test
+whether your machine is allowed to send the following to our server:
+<ul>
+<li>UDP datagrams on arbitrary ports. A number of applications require
+this connectivity, which may be blocked by default.</li>
+<li>Correct fragmentation of large UDP datagrams. Support for
+fragmented IP datagrams is important for ensuring robust operation
+regardless of your <a href="info_mtu.html">network MTU</a>.</li>
+<li>UDP-based DNS requests. The ability to send DNS requests to
+arbitrary resolver of your choosing is important, since it allows you
+to choose a different DNS service (such
+as <a href="http://www.opendns.com">OpenDNS.com</a>.  On the other
+hand, this freedom also implies that you are at risk of inadvertently
+using an unwanted DNS resolver or can bypass controls which are part
+of a commercial network.
+</li>
+<li>Other services, particularly UDP port 1434, once used by the
+notorious SQL Slammer worm.</li>
+</ul>
+
+<P><B>What if this test reports a problem:</B> If you are using
+firewalling software on your computer, make sure it does not interfere
+incorrectly.  If you are unable to configure arbitrary DNS resolvers
+but would like to do so, contact your ISP.  If we report a path MTU
+hole, it means that a network component is unable to process IP
+datagrams that are larger than its local interface MTUs.  There is
+little you can do about this, but see the <a href="info_mtu.html">path
+MTU</a> help page for more information.</P>
+
+@DEF(NSANCHOR=#udp)@
+@TMPL(expl_footer_ns.txt)@

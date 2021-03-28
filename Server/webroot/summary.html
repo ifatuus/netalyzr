@@ -1,0 +1,32 @@
+@DEF(TITLE=&mdash; Results)@
+@TMPL(header-noupdate.txt)@
+@DEF(ADDLHEAD=<script type="text/javascript" src="/collapse.js"></script>)@
+
+<div class="bar-border"><div id="bar">
+<span class="txt-done">Introduction</span> &raquo; <span class="txt-done">Analysis</span> &raquo; <span class="txt-current">Results</span> 
+</div></div>
+
+
+<div id="content">
+<div class="txt-title">Result Summary
+<div id="toggle-block" style="display:none">  <a href="javascript:expand();" class="exp" title="Expand all">+</a><span class="txt-slash">/</span><a href="javascript:collapse();" class="exp" title="Collapse all">&ndash;</a>
+<span class="txt-help">(<a href="/help.html" target="_blank">help</a>)</span></div>
+</div>
+<!-- Hide the +/- toggle bit when there is no javascript -->
+<script language="javascript" type="text/javascript">
+<!--
+document.getElementById("toggle-block").style.display = "inline";
+-->
+</script>
+
+<span class="txt-summary">@FQDN@ / @CLIENT_ADDR@</span>
+<div class="txt-small">Recorded at @SESS_TIME@.
+  <a href="http://@DEBUG_STRING@@NETALYZR_DOMAIN@/restore/id=@AGENT_ID@">Permalink</a>. @REFERER_LINK@
+  <a href="/transcript/id=@AGENT_ID@/side=client">Client</a>/<a href="/transcript/id=@AGENT_ID@/side=server">server</a> transcript. @NXLINK@
+</div>
+<hr class="summary">
+
+@RESULTS_SUMMARY@
+
+</div>
+@TMPL(footer.txt)@

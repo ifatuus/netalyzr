@@ -1,0 +1,49 @@
+@DEF(METADESCR=The Netalyzr tests your Internet connection for signs of trouble. Understand your connectivity through a detailed report of any performance and security issues.)@
+@DEF(METAKEYWORDS=Netalyzr, network troubleshooting, network analysis, network analyzer, Internet debugging, connectivity test, proxy, filtering, bandwidth, uplink, downlink, latency)@
+@TMPL(header.txt)@
+
+<script language="JavaScript" type="text/javascript">
+<!--
+if (window != top) top.location.href = location.href;
+// -->
+</script>
+
+<div class="bar-border"><div id="bar">
+<span class="txt-current">Introduction</span> &raquo; <span class="txt-todo">Analysis</span> &raquo; <span class="txt-todo">Results</span> 
+</div></div>
+
+<div id="content-main">
+<div class="txt-updated">Debug your Internet.</div>
+
+<p>The Netalyzr analyzes various properties of your Internet
+connection that you should care about &mdash; including blocking of
+important services, HTTP caching behavior and proxy correctness, your
+DNS server's resilience to abuse, NAT detection, as well as latency
+&amp; bandwidth measurements &mdash; and reports its findings in a
+detailed report.  You can check out an
+<a href="http://netalyzr.icsi.berkeley.edu/restore/id=example-session">example
+report</a> from a real network to get a better idea of our tests.</p>
+
+<p>To perform these tests, the Netalyzr runs a Java applet on your
+computer.  You may be asked to confirm network-related activities that
+your system's applet security policy or firewall considers
+sensitive. We hope that you will permit any such activity, as it will
+ensure more comprehensive test results. For details on the tests that
+will be performed please visit the <a href="/faq.html">FAQ</a>
+section.</p>
+
+<p>Click the link below to launch the probe applet. If you don't see a
+clickable link, you don't have Java installed, it is not enabled in
+your browser, or your runtime is incompatible. In that case, see
+the <a href="/faq.html">FAQ</a> section for help.  Users of Firefox's
+"NoScript" add-on may need to reload this page and wait a few seconds
+for Java to start.</p>
+
+<div id="box"><span id="box-inner">
+<applet code="Start" name="Start" archive="Start.jar" width="300" height="45">
+  <param name="DESTINATION" value="http://@NODE@.@NETALYZR_DOMAIN@/analysis/">
+</applet>
+</span></div>
+
+</div>
+@TMPL(footer-nosess.txt)@

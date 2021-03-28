@@ -1,0 +1,29 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">Network bandwidth</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> Network bandwidth is the amount of data
+your link is capable of sending (the uplink) or receiving (the
+downlink), measured in bits per second.  The more bandwidth you have,
+the faster you can transfer large files.  Likewise, more bandwidth can
+allow for higher quality when streaming videos.
+
+<P>Our estimate of this represents a <i>minimum</i>: we first try to
+send and then receive a large amount of traffic, using UDP rather than
+TCP.  But we do somewhat limit how much UDP traffic we send, so we will
+only measure up to this limit.  It can also be limited by how many users
+are currently accessing our server.
+</P>
+
+<P>Also note that this measurement can vary widely depending on
+conditions.  If there is congestion in other parts of the network, or
+if your ISP uses some prioritization techniques, the number reported
+can vary significantly based on time of day or other usage.</P>
+
+<P><B>What if this test reports a problem:</B> The test should first
+be repeated at a different time, to make sure it isn't a transient
+situation.  If the bandwidth is still unacceptably low on retesting,
+you should contact your ISP about different service options.
+
+@DEF(NSANCHOR=#bandwidth)@
+@TMPL(expl_footer_ns.txt)@

@@ -1,0 +1,26 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">DNS CNAMEs</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In order to translate a mnemonic name (such as
+"@NETALYZR_DOMAIN@") to an IP address, your computer
+contacts a Domain Name Service (DNS) resolver.  This is a computer
+controlled by your ISP which acts as an intermediary.</p>
+
+<P>One portion of how DNS resolvers operate is how they respond to
+CNAMEs.  When your ISP's resolver asks for a name like
+"www.google.com", the response can include a CNAME saying
+"www.google.com is really www.l.google.com".  Additionally, the
+response can, at the same time, include a record for the alias,
+giving the address for "www.l.google.com".</p>
+
+<P>An important but subtle portion of DNS operations is how your ISP's
+DNS resolver accepts these fields, as part of the "glue acceptance" or
+"bailiwick checking" policy.</P>
+
+<P>This test works by querying special names in a domain we control,
+where the response is different depending on whether the additional
+data for the CNAME is accepted or not.  Thus we can deduce how the DNS
+resolver handles CNAMEs.</p>
+
+@TMPL(expl_footer_ns_generic.txt)@

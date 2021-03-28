@@ -1,0 +1,27 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">DNS lookup performance</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In this test we measure the latency of DNS lookups performed by the
+resolver configured on your machine. This latency directly affects the
+performance you observer in application using the network.  If the
+figure is too high (generally over 300-500ms), you may perceive the
+network as being "slow" even when your traffic is able to download
+quickly.</p>
+
+<p>We measure this latency in two ways: the time required for uncached
+lookups informs you about the minimum time taken for lookups the
+resolver cannot immediately answer itself but must instead query our
+server, while the time required for cached lookups is a lower bound
+for all DNS lookups using this resolver.</p>
+
+<P><B>What if this test reports a problem:</B> If this test reports a
+problem but your normal network latency is acceptable, the first step
+would be to try again in an hour or two to determine if this is just a
+transient problem.  If the performance is still unacceptable, you may
+wish to shift to a third-party DNS resolver or contact your ISP for
+assistance.
+</P>
+
+@DEF(NSANCHOR=#dnslatency)@
+@TMPL(expl_footer_ns.txt)@

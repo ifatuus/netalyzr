@@ -1,0 +1,25 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">HTTP proxy detection through IP addresses</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> HTTP proxies are a core component of the architecture of the World
+Wide Web. HTTP proxies are able to cache content locally, thus
+speeding up web content retrieval times for your
+browser. Unfortunately, misconfigured proxies can cause your browser
+to render outdated content. In the worst case malicious proxies can
+modify the content of your web pages. It is therefore important to be
+aware of any proxies that process your HTTP traffic.</p>
+
+<p>HTTP traffic flowing through HTTP proxies that do not operate
+transparently may appear to be arriving at our server from different
+IP addresses than your regular traffic. By examining the source IP
+addresses, this test attempts to identify such proxies and reports the
+results.</p>
+
+<P><B>What if this test reports a problem:</B> The presence of a proxy
+is unlikely to be an error, but it is something that you should be
+aware of.  If you are concerned about the role of the proxy, you
+should contact your network operator to learn what function this proxy
+performs.</P>
+
+@TMPL(expl_footer_ns_generic.txt)@

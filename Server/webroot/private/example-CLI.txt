@@ -1,0 +1,71 @@
+
+# Backend node against which the tests are run. In contrast to applet,
+# this specifies the name *after* a backend is selected.
+# put your node below e.g this will resolve to  A Record : n1.YOUR-NODE.com
+NODE=n1
+
+LANG=en-US
+MODE=cli
+AGENT_ID=369839a0-9699-1212b05c-76f3-4c41-bd17
+
+# Another server reachability test 
+ALTERNATE_SERVER=www.icir.org
+ALTERNATE_SERVER_PORT=80
+
+# Server reporting address 
+REPORT_SERVER=node54_152_57_160.netalyzr.icsi.berkeley.edu
+REPORT_SERVER_PORT=80
+UDP_ECHO_PORT=1947
+TCP_ECHO_PORT=1947
+
+# Test for latency/bandwidth/etc issues 
+UDP_BUFFER_PORT=1948
+
+# Test for DNS proxying 
+DNS_ECHO_PORT=1949
+
+# Test for Fragmentation 
+FRAGMENT_ECHO_PORT=1950
+FRAGMENT_ECHO_PORT_V6=1951
+
+# The length of lena 
+IMAGE_LENGTH=67683
+
+# DNS-related parameters 
+VALID_DNS_NAME=www.icir.org
+INVALID_DNS_NAME=fubararg.icir.org
+INVALID_DNS_DOMAIN=www.aoeutnhaonethaaaoeuh.com
+UNCACHED_NAME=nocached.icir.org
+CACHED_NAME=cached.icir.org
+DNS_SERVER=192.150.186.11
+
+CUST_DNS_DOMAIN=netalyzr.icsi.berkeley.edu
+CUST_DNS_ALT_DOMAIN=netalyzr.icir.org
+CUST_DNS_ADDR=54.152.57.160
+
+# Properties of user's browser 
+USER_AGENT=Java/1.8.0_131
+ACCEPT=text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+ACCEPT_LANGUAGE=en-us,en;q=0.5
+ACCEPT_ENCODING=gzip,deflate
+ACCEPT_CHARSET=ISO-8859-1,utf-8;q=0.7,*;q=0.7
+
+# Tests for lookups 
+#eicar-standard-av-test-file.com
+#Requested URL: *http://www.eicar.org/download/eicarcom2.zip*
+EXE_FILE=netalyzr.exe
+EXE_LENGTH=3072
+MP3_FILE=netalyzr.mp3
+MP3_LENGTH=8532
+FAKE_VIRUS_FILE=eicar-standard-av-test-file.com
+FAKE_VIRUS_LENGTH=68
+TORRENT_FILE=Fedora-10-i686-Live.torrent
+TORRENT_LENGTH=54772
+
+IPV6_SERVER=2607:f740:b::f93
+IPV4_SERVER=209.177.157.243
+
+IPV6_GOOGLE_IMG=http://ipv6.google.com/images/logo_sm.gif
+IPV4_IMG=http://ipv4_node.369839a0-9699-1212b05c-76f3-4c41-bd17.netalyzr.icsi.berkeley.edu/test.gif
+IPV6_IMG=http://ipv6_node.369839a0-9699-1212b05c-76f3-4c41-bd17.netalyzr.icsi.berkeley.edu/test.gif
+IPV4V6_IMG=http://ipv4v6_node.369839a0-9699-1212b05c-76f3-4c41-bd17.netalyzr.icsi.berkeley.edu/test.gif

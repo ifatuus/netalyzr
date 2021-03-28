@@ -1,0 +1,65 @@
+# Backend node against which to run the tests
+NODE=@NODE@
+
+LANG=@LANG@
+MODE=@MODE@
+AGENT_ID=@AGENT_ID@
+
+# Another server reachability test 
+ALTERNATE_SERVER=www.icir.org
+ALTERNATE_SERVER_PORT=80
+
+# Server reporting address 
+REPORT_SERVER=@MY_NAME@.@NETALYZR_DOMAIN@
+REPORT_SERVER_PORT=80
+UDP_ECHO_PORT=1947
+TCP_ECHO_PORT=1947
+
+# Test for latency/bandwidth/etc issues 
+UDP_BUFFER_PORT=1948
+
+# Test for DNS proxying 
+DNS_ECHO_PORT=1949
+
+# Test for Fragmentation 
+FRAGMENT_ECHO_PORT=1950
+FRAGMENT_ECHO_PORT_V6=1951
+
+# The length of lena 
+IMAGE_LENGTH=67683
+
+# DNS-related parameters 
+VALID_DNS_NAME=www.icir.org
+INVALID_DNS_NAME=fubararg.icir.org
+INVALID_DNS_DOMAIN=www.aoeutnhaonethaaaoeuh.com
+UNCACHED_NAME=nocached.icir.org
+CACHED_NAME=cached.icir.org
+DNS_SERVER=192.150.186.11
+CUST_DNS_DOMAIN=@NETALYZR_DOMAIN@
+CUST_DNS_ALT_DOMAIN=netalyzr.icir.org
+CUST_DNS_ADDR=@MY_ADDR@
+
+# Properties of user's browser 
+USER_AGENT=@USER_AGENT@
+ACCEPT=@ACCEPT@
+ACCEPT_LANGUAGE=@ACCEPT_LANG@
+ACCEPT_ENCODING=@ACCEPT_ENC@
+ACCEPT_CHARSET=@ACCEPT_CHARS@
+
+# Tests for lookups 
+EXE_FILE=netalyzr.exe
+EXE_LENGTH=3072
+MP3_FILE=netalyzr.mp3
+MP3_LENGTH=8532
+FAKE_VIRUS_FILE=eicar-standard-av-test-file.com
+FAKE_VIRUS_LENGTH=68
+TORRENT_FILE=Fedora-10-i686-Live.torrent
+TORRENT_LENGTH=54772
+
+IPV6_SERVER=@IPV6_SERVER@
+IPV4_SERVER=@IPV4_SERVER@
+
+IPV6_GOOGLE_IMG=http://ipv6.google.com/images/logo_sm.gif
+IPV4_IMG=http://ipv4_node.@AGENT_ID@.@NETALYZR_DOMAIN@/test.gif
+IPV6_IMG=http://ipv6_node.@AGENT_ID@.@NETALYZR_DOMAIN@/test.gif
+IPV4V6_IMG=http://ipv4v6_node.@AGENT_ID@.@NETALYZR_DOMAIN@/test.gif

@@ -1,0 +1,32 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">DNS-based host information</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> Various organizations on the Internet provide information about
+hosts based on the host's IP addresses.  These services operate by
+using DNS (the Domain Name System) to conduct the query.  In this
+test, we query some of these services for your computer's status. In
+particular, we test the following:
+<ul>
+<li>Whether you are an exit node for
+the <a href="http://www.torproject.org">Tor</a> overlay network.</li>
+<li>Whether you are listed on spam/malware-related blacklists. We are
+testing the ones operated by <a href="">Spamhaus</a>.</li>
+<li>Whether your IP address seems to be assigned statically or
+dynamically.</li>
+</ul>
+</p>
+
+<P><B>What if this test reports a problem:</B> If you are on a public
+network (such as a WiFi hotspot), the Spamhaus blacklists may include
+your current public IP address because of behavior exhibited by
+another user's machine previously using the same address.  A similar
+problem affects networks that obtain their public IP address
+dynamically, as ISPs may issue the IP same addresses to different
+customers over time.  If you get this alert on your home or business
+connection, you should make sure your antivirus software is up to
+date.
+</P>
+
+@DEF(NSANCHOR=#dns)@
+@TMPL(expl_footer_ns.txt)@

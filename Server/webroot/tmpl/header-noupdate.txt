@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- Netalyzr -->
+<head>
+<title>ICSI Netalyzr @SUB(TITLE)@</title>
+<link rel="stylesheet" type="text/css" href="http://@NETALYZR_DOMAIN@/style.css">@SUB(ADDLHEAD)@
+<link rel="icon" type="image/png" href="http://@NETALYZR_DOMAIN@/favicon.png">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="description" content="@SUB(METADESCR)@">
+<meta name="keywords" content="@SUB(METAKEYWORDS)@">
+</head>
+<body @SUB(BODYTWEAKS)@>
+<div><b class="corner"><b class="corner1"><b></b></b><b class="corner2"><b></b></b><b class="corner3"></b><b class="corner4"></b><b class="corner5"></b></b><div class="cornerfg">
+
+<div id="frame">
+<div class="hdr">The <a class="plain" href="http://@NETALYZR_DOMAIN@/index.html"><span class="txt-icsi">ICSI</span> <span class="txt-isp">Netalyzr</span></a></div>
+<a href="/news.html"></a>
+

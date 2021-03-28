@@ -1,0 +1,22 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">DNS 0x20 randomization</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In order to translate a mnemonic name (such as
+"@NETALYZR_DOMAIN@") to an IP address, your computer contacts a
+Domain Name Service (DNS) resolver.  This is a computer controlled by
+your ISP which acts as an intermediary.  Recently, a series of
+<a href="http://en.wikipedia.org/wiki/DNS_cache_poisoning">cache
+poisoning attacks</a> on the DNS system were discovered that can be
+thwarted in a number of ways.</p>
+
+<p>One such defense
+is <a href="http://portal.acm.org/citation.cfm?id=1455770.1455798">0x20
+randomization</a>.  In this scheme, the DNS resolver randomly changes
+the capitalization of names and ensures that returned names match the
+chosen capitalization.  This test queries a special name we control
+which detects the presence of any 0x20 randomization employed by your
+ISP's DNS resolver.
+</p>
+
+@TMPL(expl_footer_ns_generic.txt)@

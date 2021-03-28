@@ -1,0 +1,41 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">DNS lookups for popular domains</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In order to translate a mnemonic name (such as
+"@NETALYZR_DOMAIN@") to an IP address, your computer
+contacts a Domain Name Service (DNS) resolver.  This is a computer
+controlled by your ISP which acts as an intermediary.</p>
+
+<p>The DNS servers can also answer reverse lookups, translating the IP address
+to a mnemonic name. Testing whether a reverse lookup succeeds and
+whether the name obtained in the reverse lookup matches the original
+name is an important security mechanism, since it provides a degree of
+assurance that the translation to an IP address was performed
+correctly.  Attackers are often interested in changing DNS
+information, so that your computer is misdirected.</p>
+
+<p>In this test, your computer looks up the IP addresses of a number
+of popular domains, and our server performs the corresponding reverse
+lookups, and checks for consistency.  Unfortunately, not all domains
+support reverse lookups, so sometimes we are unable to find an
+answer.</p>
+
+<P><B>What if this test reports a problem:</B> The most common cause is
+a false positive due to <A HREF="info_dns_wildcarding.html">DNS
+Wildcarding</A> combined with a transient error or incomplete
+information on our part as to what the proper reverse names may be for
+the hostname in question.</P>
+
+<P>However, there may be other causes.  For example, some ISPs will
+impersonate www.google.com, resolving it to the address of a local
+proxy instead of a Google server.  There also exists malware which
+changes victims' DNS settings to employ malicious resolvers.  One
+strand of such malware will cause windowsupdate.microsoft.com to
+resolve to a Google IP address, or ad.doubleclick.net to resolve
+anomalously.  If our tests indicate such problems, you should update
+your antivirus software and remove any manual DNS settings on your
+computer or your NAT.
+</P>
+
+@TMPL(expl_footer_ns_generic.txt)@

@@ -1,0 +1,35 @@
+@DEF(ADDLHEAD=<meta http-equiv="refresh" content="5;url=http://@NETALYZR_DOMAIN@/load.html">)@
+@TMPL(header.txt)@
+<div class="bar-border"><div id="bar">
+<span class="txt-current">Introduction</span> &raquo; <span class="txt-todo">Analysis</span> &raquo; <span class="txt-todo">Results</span> 
+</div></div>
+
+<div id="content-main">
+
+<p><b>Please be patient:</b> This site is currently receiving
+approximately @LOAD_CURRENT@ visits per minute.  This page will
+automatically refresh in 
+<B id="countdown">5 seconds</B>. 
+
+<script language="javascript" type="text/javascript">
+<!--
+var seconds = 6
+var text = "6 seconds"
+function display(){
+  if(seconds > 0){
+    seconds-=1
+  } 
+  if(seconds == 1){
+     text = "1 second"
+  } else {
+     text = seconds + " seconds"
+  }
+  document.getElementById("countdown").innerHTML=text
+  setTimeout("display()",1000)
+}
+display()
+-->
+</script>
+
+</div>
+@TMPL(footer-nosess.txt)@

@@ -1,0 +1,48 @@
+@DEF(ADDLHEAD=<meta http-equiv="refresh" content="20;url=http://@NETALYZR_DOMAIN@">)@
+@TMPL(header.txt)@
+<div class="bar-border"><div id="bar">
+<span class="txt-current">Introduction</span> &raquo; <span class="txt-todo">Analysis</span> &raquo; <span class="txt-todo">Results</span> 
+</div></div>
+
+<div id="content-main">
+
+<p class="center">
+  <span class="txt-icsi">Debug your Internet.</span>
+</p>
+
+@TMPL(title_image.txt)@
+
+<p><a href="learn.html">Learn more</a>, or see
+an <a href="http://netalyzr.icsi.berkeley.edu/restore/id=example-session">
+example report</a>, or look at the <a href="/faq.html">FAQ</a>.</p>
+
+
+<p><b>Please be patient:</b> This site is currently receiving
+approximately @LOAD_CURRENT@ visits per minute. As a result, we are a
+little behind schedule, but fear not, we're catching up! This page
+will automatically refresh in 
+<B id="countdown">20 seconds</B>. You can also try visiting
+later. We apologize for the inconvenience.</p>
+
+<script language="javascript" type="text/javascript">
+<!--
+var seconds = 21
+var text = "21 seconds"
+function display(){
+  if(seconds > 0){
+    seconds-=1
+  } 
+  if(seconds == 1){
+     text = "1 second"
+  } else {
+     text = seconds + " seconds"
+  }
+  document.getElementById("countdown").innerHTML=text
+  setTimeout("display()",1000)
+}
+display()
+-->
+</script>
+
+</div>
+@TMPL(footer-nosess.txt)@

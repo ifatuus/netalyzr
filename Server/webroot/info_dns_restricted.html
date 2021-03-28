@@ -1,0 +1,16 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">Restricted DNS lookups</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In order to test how your ISP's DNS resolver, the component which
+translates a mnemonic name such as "@NETALYZR_DOMAIN@" into an Internet
+address, the applet needs to be able to perform DNS queries.
+
+<P>Java does not always allow arbitrary lookups of names, depending on
+the security settings.  This test determines whether the applet can
+look up an unrelated name which nonetheless resolves to the server's
+address.  If successful, we are then able to look up special names to
+determine information on how your DNS resolver handles "glue" records
+and other requests.
+
+@TMPL(expl_footer_ns_generic.txt)@

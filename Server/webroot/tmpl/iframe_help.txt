@@ -1,0 +1,35 @@
+  Embedding Netalyzr
+  ==================
+
+  You can embed Netalyzr in one of two forms: as a start link as shown
+  on the Netalyzr homepage (use option m=link), or directly as the
+  application that executes the testsuite (use option m=app).  In
+  addition, you can theme the appearance of the iframe by adding
+  suitable URL-encoded parameters. The full URL format is:
+
+  http://netalyzr.icsi.berkeley.edu/iframe/d={link|app}/m=mode/l=lang/tc=col/bc=col/lc=col/h=int/s=float//t=[yn]/w=int
+
+  The parameters' meanings are as as follows:
+
+  - d:  display, either "link" (default when not used) for start link, 
+        or "app" for running testsuite right away.
+  - m:  test mode.
+  - l:  language, e.g. "en" or "de".
+
+  The following options apply only to the start link mode (m=link):
+
+  - tc: text color for warnings regarding JavaScript/Java enabledness.
+  - bc: background color.
+  - lc: text color of the "Start analysis" link.
+
+  - w:  width of the applet, in pixles.
+  - h:  height of the applet, in pixles.
+
+  - s:  scaling of the "Start analysis" link. Try something around 1.5.
+  - t:  JavaScript/Java availability tests, either "y" or "n"
+
+  To specify a color, use the HTML/CSS format (for example #112233 or
+  #abc). You do not need to include the '#' character.
+
+  The recommended size for an iframe is a width of at least 500 pixels
+  and a height of at least 70 pixels.

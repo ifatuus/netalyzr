@@ -1,0 +1,30 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">Detecting in-line HTTP caches</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> HTTP proxies are a core component of the
+architecture of the World Wide Web. HTTP proxies are able to cache
+content locally, thus speeding up web content retrieval times for your
+browser. Unfortunately, misconfiguration proxies can cause your
+browser to render outdated content. In the worst case malicious
+proxies can modify the content of your web pages. It is therefore
+important to be aware of any proxies that process your HTTP
+traffic.</p>
+
+<p>Often, the purpose of proxies is to <i>cache</i> data, to store it
+to speed subsequent requests by you and other users.  Our server has
+the ability to return a piece of data which changes with each request,
+but which would appear to a proxy to be cacheable or uncacheable.
+Thus this test detects if an HTTP cache exists and, if it does,
+whether it is operating correctly or caching data that it should
+not.</p>
+
+<P><B>What if this test reports a problem:</B> Caches are usually
+acceptable as long as the user is aware of them and they work
+correctly.  If, however, our tests indicate overzealous caching
+behavior (such as when data we marked "uncacheable" is nevertheless
+cached), you should complain to your network provider, as this
+indicates a serious problem with the cache.</P>
+
+@DEF(NSANCHOR=#caching)@
+@TMPL(expl_footer_ns.txt)@

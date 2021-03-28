@@ -1,0 +1,40 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">DNS wildcarding</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> The DNS system is responsible for turning
+mnemonic names into Internet addresses.  But what if the name does not
+exist, either because of a typo or other failure?  In such case, the
+server is supposed to return a failure, which will tell the program
+that "this name currently does not exist".
+
+<P>Recently, however, several ISPs have started wildcarding these
+errors on their DNS servers by doing NXDOMAIN rewriting, thus instead
+of returning "no such name", they return the address of a server which
+suggests corrections as a way of generating profit for the ISP by
+serving advertisements.
+
+<P>Such behavior, although it attempts to be helpful, can cause other
+problems.  For example, the web browser itself may have correction
+mechanisms which will be blocked by this.  An example is where
+Firefox, if you type in a single word, will first attempt a DNS
+lookup, and, if it fails, perform a Google search.  DNS NXDOMAIN
+rewriting will disrupt this functionality.</P>
+
+<P>Similarly, web browsers are not the only application which performs
+DNS lookups, and which expect a failure when a name does not exist.
+This problem is exacerbated if the ISP also blocks access to
+third-party DNS resolvers.</P>
+
+<P><B>What if this test reports a problem:</B> Try typing a random
+address in your web browser, one composed of a large number of
+characters produced by just pounding on the keyboard.  This will
+usually cause the ISP's advertisement page to appear, which should
+contain opt-out instructions to disable this feature.  If there are no
+opt-out instructions, or if the opt-out instructions are unclear, we
+would suggest calling your ISP's customer service to complain about
+the lack of a clear and usable opt-out.
+</P> 
+
+@DEF(NSANCHOR=#wildcarding)@
+@TMPL(expl_footer_ns.txt)@

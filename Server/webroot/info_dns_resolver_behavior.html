@@ -1,0 +1,46 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">Your DNS resolver</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In order to translate a mnemonic name (such as
+"@NETALYZR_DOMAIN@") to an IP address, your computer contacts a
+Domain Name Service (DNS) resolver.  This is a computer controlled by
+your ISP which acts as an intermediary.</P>
+
+<P>In this series of tests, we examine various properties of how your
+DNS resolver conducts requests.</P>
+
+<P><B>DNS resolver latency:</B> This tests measures how quickly your
+DNS resolver is able to return a name.  Slow resolvers may make the
+net seem "slow" even if the network itself is fast.
+</P>
+
+<P><B>DNS record type:</B> Some DNS resolvers use "A records" (host
+record) requests to find hosts, while some others ask for "ANY
+records".  This test determines which convention your ISP's resolver
+uses.
+</P>
+
+<P><B>DNS support for IPv6:</B> IPv6 is the next generation Internet
+protocol.  This test records whether your DNS resolver is asking for
+IPv6 addresses as well as IPv4 addresses.
+</P>
+
+<P><B>EDNS and DNSSEC:</B> Extended DNS (EDNS) is an optional
+mechanism in DNS, commonly used for DNS Security (DNSSEC).  This test
+records whether the resolver will request DNSSEC records and use EDNS
+to accept larger results.
+</P>
+
+<P><B>0x20 Randomization:</B> 0x20 randomization uses random
+CaPiTALizaTion to encode a random value in a DNS request.  This test
+records whether your resolver uses 0x20, and, if not, will it pass
+requests in a case-sensitive manner.
+</P>
+
+<P><B>Short TTLs:</B> DNS records have a Time to Live (TTL) field
+measured in seconds.  This test verifies that your DNS resolver
+properly handles short TTLs.</A>
+</P>
+
+@TMPL(expl_footer_ns_generic.txt)@

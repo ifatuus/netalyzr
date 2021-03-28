@@ -1,0 +1,17 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">DNS support for IPv6</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In this test we measure whether your system
+supports looking up names that use IPv6 instead of, or in addition to,
+IPv4.  This checks whether your system, your system's DNS server, and
+their interaction with Google will support IPv6.</P>
+
+<P><B>What if this test reports a problem:</B> If this test reports a
+problem it is probably related to
+bad <a href="info_dns_wildcarding.html">NXDOMAIN wildcarding</a>,
+which means your DNS server turns failing DNS name lookups into
+alternative (typically advertisement-enhanced) "suggestions".  These
+can cause problems for applications other than your web browser.</P>
+
+@TMPL(expl_footer_ns.txt)@

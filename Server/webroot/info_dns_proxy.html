@@ -1,0 +1,24 @@
+@TMPL(expl_header.txt)@
+<span class="txt-summary">DNS external proxies</span>
+<hr class="summary"/>
+
+<p><B>About this test:</B> In order to translate a mnemonic name (such
+as "@NETALYZR_DOMAIN@") to an IP address, your computer contacts a
+Domain Name Service (DNS) resolver.  However, DNS resolvers can also
+be used for "DOS amplification attacks", where an attacker creates
+fake requests which generate a large amount of traffic in reply,
+flooding a victim's network connection.</P>
+
+<P>This test checks to make sure you are not inadvertently running an
+externally accessible DNS resolver or proxy which others could
+exploit.  The test works by sending a small request to your IP address
+to see if its affected by this problem.</P>
+
+<P><B>What if this test reports a problem:</B> The most likely cause
+is a bad NAT/"home router", which does not simply act as an internal
+DNS proxy but also accepts external requests due to a bug.  You should
+make sure your NAT is fully up to date.  If this error persists after
+updating your NAT, you should contact your NAT vendor to report this
+as a bug.</P>
+
+@TMPL(expl_footer_ns_generic.txt)@

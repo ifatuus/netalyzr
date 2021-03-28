@@ -1,0 +1,14 @@
+<div class="bar-border"><div id="footer">
+&nbsp;
+<div id="footer-right">
+<a class="footer-it" href="/faq.html">FAQs</a> + 
+<a class="footer-it" href="/news.html">News</a> +
+<a class="footer-it" href="/links.html">Links</a> + 
+<a class="footer-it" href="http://www.icsi.berkeley.edu">ICSI</a>
+</div></div></div>
+
+</div>
+
+</div><b class="corner"><b class="corner5"></b><b class="corner4"></b><b class="corner3"></b><b class="corner2"><b></b></b><b class="corner1"><b></b></b></b></div>
+</body>
+</html>

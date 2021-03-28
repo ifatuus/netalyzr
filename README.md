@@ -27,7 +27,6 @@ A simple ECHO server with IP:PORT give the client a baseline to connect to.
   -The node the test will be performed on
   -The ID given to the client to run the test
   -Various other details (see config.txt)
-
 2. Tests are then generated and start running.
 
 # Needed

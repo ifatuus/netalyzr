@@ -10,7 +10,7 @@ Netalyzr.java
 
 The idea of this project will be to either rewrite the Netalyzr totally or get the old client working.
 
-# Where we currently stand.
+# Where we currently stand
 So far after taking a look at the java client, we have managed to access all the client-side code. We can now direct all the checks made to a server - somewhere other than berkley or icir.
 
 Each test performed by the client looked for certain replies from the server to verify the result.
@@ -19,7 +19,7 @@ We know that the server-side was made in python and it replied to the client in 
 
 A simple ECHO server with IP:PORT give the client a baseline to connect to.
 
-# Known steps the client takes.
+# Known steps the client takes
 
 1.Looks for a config served as plain text this includes
   -Build number
@@ -29,7 +29,7 @@ A simple ECHO server with IP:PORT give the client a baseline to connect to.
 
 2. Tests are then generated and start running.
 
-# Needed.
+# Needed
 
 -Server, we have currently used a simple phython echo server to get the client repsonding to the test. This needs to be worked on to get more of the tests working.
 
